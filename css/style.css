@@ -5,15 +5,22 @@
     box-sizing: border-box;
 }
 
+.container {
+    display: flex;
+
+}
+
+.image-100 {
+    max-width: 100%;
+    display: block;
+}
+
+
 /* regole nav + main */
 #main-block {
     height: calc(100vh - 80px);
 }
 
-.container {
-    display: flex;
-
-}
 /* regole nav */
 #user-search {
     width: 250px;
@@ -30,6 +37,35 @@ main {
     /* debug */
     background-color: burlywood;
 }
+
+/* regole upgrade */
+#upgrade {
+    width: calc(100% - 250px);
+    height: 80px;
+    padding-right: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#upgrade #btn-upgrade {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 1.5em;
+    border: 2px solid #fff;
+    padding: 0.7em 3em;
+}
+/* regole song picker */
+#song-picker {
+    margin-top: 90px;
+    padding: 0 1rem;
+}
+
+
 /* regole playbar */
 #playbar {
     height: 80px;
