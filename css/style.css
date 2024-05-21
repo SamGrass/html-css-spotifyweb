@@ -25,6 +25,10 @@ body {
 .margin-bt-1em > * {
     margin-bottom: 1em;
 }
+
+ul {
+    list-style: none;
+}
 /* regole titoli */
 
 h3 {
@@ -58,16 +62,56 @@ a {
 }
 
 /* regole nav */
-#user-search {
+#user-nav {
     width: 250px;
     height: 100%;
     background-color: #000000;
+    padding: 2rem 1rem 0.5rem;
+    position: relative;
 }
 
+/* regole logo */
+.logo-spotify {
+    width: 80%;
+    margin-bottom: 1.5rem;
+}
+
+#logo-spotify-small {
+    display: none;
+}
+
+/* regole user search */
+#user-search div {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.image-nav {
+    width: 2rem;
+    filter: invert(52%) sepia(6%) saturate(251%) hue-rotate(185deg) brightness(94%) contrast(87%);
+    transition: filter 0.3s ease;
+}
+
+.txt-opacity:hover .image-nav {
+    filter: none;
+}
+
+#user-search div:hover a {
+    color: #fff;
+}
+
+/* regole profile */
+#profile {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 1rem;
+}
 /* regole main */
 main {
     width: calc(100vw - 250px);
     overflow-y: auto;
+    height: 100%;
     background-color: #141922;
 }
 
@@ -98,7 +142,6 @@ main {
     width: 100%;
     display: flex;
     gap: 2rem;
-    list-style: none;
     justify-content: center;
     margin-bottom: 2rem;
 }
@@ -345,9 +388,33 @@ main .col {
 /* breakpoint extra small screen */
 @media all and (max-width:700px) {
 
-    /* regole user search */
-    #user-search {
+    /* regole user nav */
+    #user-nav {
         width: 50px;
+        padding: 1rem 0.5rem 0.25rem;
+    }
+
+    /* regole logo */
+    .logo-spotify {
+        display: none;
+        width: 100%;
+    }
+    
+    #logo-spotify-small {
+        display: block;    
+    }
+
+    /* regole user search */
+    .image-nav {
+        width: 100%;
+    }
+
+    #user-search div {
+        width: 100%;
+    }
+
+    #user-search .txt-search {
+        display: none;
     }
 
     /* regole main */
