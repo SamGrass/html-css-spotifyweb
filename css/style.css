@@ -27,9 +27,6 @@ body {
     margin-bottom: 1em;
 }
 /* regole titoli */
-h2 {
-    margin-bottom: 2em;
-}
 
 h3 {
     font-size: 1.3rem;
@@ -75,9 +72,11 @@ main {
     background-color: #141922;
 }
 
+
+
 /* regole upgrade */
 #upgrade {
-    width: calc(100% - 250px);
+    width: calc(100vw - 250px);
     height: 80px;
     padding-right: 3rem;
     background-color: rgba(0, 0, 0, 0.5);
@@ -106,26 +105,44 @@ main {
     justify-content: center;
     margin-bottom: 2rem;
 }
+
 #song-picker-nav .txt-opacity:first-child:active {
-    border-bottom: 1px solid #9de82a;
+    border-bottom: 2px solid #9de82a;
 }
+
 #song-picker {
     margin-top: 90px;
     padding: 0 1rem;
 }
 
-.song-container{
+/* regole spotify main */
+.spotify-main {
+    margin-bottom: 5rem;
+}
+
+.spotify-main > .container {
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1rem;
+}
+
+main .col {
+    width: calc(100% / 6 - 1rem);
+}
+
+.play-container{
     position: relative;
 }
+
 .play-song {
     display: none;
     position: absolute;
     width: 100%;
     height: 100%;
     box-shadow: inset 0 0 5rem 1rem #000000a5;
-    background-color: #0000001f;
-    
+    background-color: #0000001f;    
 }
+
 .play-song .fa-circle-play {
     position: absolute;
     font-size: 3rem;
@@ -133,14 +150,68 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.song-container:hover .play-song {
+
+.play-container:hover .play-song {
     display: block;
 }
 
+/* regole spotify song */
 
+#spotify-song h2 {
+    margin-bottom: 2rem;
+}
 
+/* regole spotify reccomend e artisti */
+
+#spotify-reccomend h2,#spotify-artist h2 {
+    margin-bottom: 0.7rem;
+}
+
+#spotify-reccomend h4,#spotify-artist h4{
+    margin-bottom: 2rem;
+}
+
+/* regole spotify artist */
+.circle {
+    border-radius: 50%;
+}
 /* regole playbar */
 #playbar {
     height: 80px;
     background-color: #282828;
+}
+
+/* breakpoint medium screen */
+@media all and (max-width:1300px) {
+    
+    main .col {
+        width: calc(100% / 4 - 1rem);
+    }
+
+    #song-picker-nav {
+        flex-wrap: wrap;
+    }
+}
+
+/* breakpoint small screen */
+@media all and (max-width:950px) {
+
+    main .col {
+        width: calc(100% / 2 - 1rem);
+    }
+}
+/* breakpoint extra small screen */
+@media all and (max-width:700px) {
+
+    #user-search {
+        width: 50px;
+    }
+
+    main {
+        width: calc(100vw - 50px);
+    }
+
+    #upgrade {
+        width: calc(100vw - 50px);
+    }
 }
