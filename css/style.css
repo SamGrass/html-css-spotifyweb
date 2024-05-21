@@ -15,7 +15,6 @@ body {
 
 .container {
     display: flex;
-
 }
 
 .image-100 {
@@ -71,8 +70,6 @@ main {
     overflow-y: auto;
     background-color: #141922;
 }
-
-
 
 /* regole upgrade */
 #upgrade {
@@ -179,6 +176,113 @@ main .col {
 #playbar {
     height: 80px;
     background-color: #282828;
+    padding: 0.5rem 1rem;
+}
+
+#playbar > .container {
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col {
+    height: 100%;
+    width: calc(100% / 3);
+}
+
+.col-sx,.col-dx {
+    display: flex;
+    align-items: center;
+}
+
+/* regole colonna sx */
+.col-sx {
+    gap: 1rem;
+    justify-content: start;
+}
+
+#playbar .image-container {
+    height: 100%;
+    flex-shrink: 0;
+}
+
+#playbar .image-container .image-100 {
+    max-height: 100%;
+}
+
+#name-playbar {
+    color: #fff;
+}
+
+#artist-playbar {
+    font-size: 0.8rem;
+}
+
+#artist-playbar:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#add-favourite {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* regole linee */
+.line-full{
+    position: relative;
+    height: 4px;
+    background-color: #7d7f84;
+    border-radius: 2px;
+}
+
+.line-selected {
+    position: absolute;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.line-selected::after {
+    font-family: "FontAwesome";
+    content: "\f111";
+    height: 16px;
+    width: 16px;
+    font-weight: 900;
+    display: inline;
+    position: absolute;
+    top: -16px;
+    right: 0;
+    transform: translate(50%, 50%);
+    display: none;
+}
+.line-full:hover .line-selected {
+    background-color: #9de82a;
+}
+
+.line-full:hover .line-selected::after {
+    display: block;
+}
+
+.col-central {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-dx {
+    justify-content: end;
+    gap: 1rem;
+}
+
+.col-dx .line-full {
+    width: 140px;
+}
+
+.col-dx .line-selected {
+    width: 30%;
 }
 
 /* breakpoint medium screen */
@@ -199,19 +303,29 @@ main .col {
     main .col {
         width: calc(100% / 2 - 1rem);
     }
+
+    /*  */
 }
 /* breakpoint extra small screen */
 @media all and (max-width:700px) {
 
+    /* regole user search */
     #user-search {
         width: 50px;
     }
 
+    /* regole main */
     main {
         width: calc(100vw - 50px);
     }
 
     #upgrade {
         width: calc(100vw - 50px);
+    }
+
+    /* regole playbar */
+
+    #song-playbar-txt {
+        display: none;
     }
 }
