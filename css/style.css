@@ -185,7 +185,7 @@ main .col {
     align-items: center;
 }
 
-.col {
+#playbar .col {
     height: 100%;
     width: calc(100% / 3);
 }
@@ -265,6 +265,8 @@ main .col {
     display: block;
 }
 
+
+/* regole col central */
 .col-central {
     display: flex;
     flex-direction: column;
@@ -272,6 +274,41 @@ main .col {
     align-items: center;
 }
 
+.col-central .container {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 2rem;
+}
+
+.col-central .fa-solid {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.col-central .fa-circle-play {
+    font-size: 1.7rem;
+}
+
+.col-central .fa-circle-play:hover {
+    font-size: 2rem;
+}
+
+.col-central .line-full {
+    width: 70%;
+}
+
+.col-central .line-selected {
+    width: 17%;
+}
+
+.song-time {
+    font-size: 0.7rem;
+}
+
+
+/* regole col dx */
 .col-dx {
     justify-content: end;
     gap: 1rem;
@@ -298,13 +335,12 @@ main .col {
 }
 
 /* breakpoint small screen */
-@media all and (max-width:950px) {
+@media all and (max-width:1050px) {
 
     main .col {
         width: calc(100% / 2 - 1rem);
     }
 
-    /*  */
 }
 /* breakpoint extra small screen */
 @media all and (max-width:700px) {
