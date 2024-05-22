@@ -68,7 +68,9 @@ a {
     height: 100%;
     background-color: #000000;
     padding: 2rem 1rem 0.5rem;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* regole logo */
@@ -85,7 +87,6 @@ a {
 #user-search div, #bottom-user > div {
     display: flex;
     align-items: center;
-    width: fit-content;
     gap: 0.5rem;
 }
 
@@ -108,11 +109,6 @@ a {
 }
 
 /* regole user-playlist */
-#user-playlist {
-    min-height: 190px;
-    height: 530px;
-    overflow-y: auto;
-}
 
 #user-playlist > * {
     margin-bottom: 1rem;
@@ -121,6 +117,11 @@ a {
 #user-playlist .container {
     align-items: center;
     gap: 0.5rem;
+}
+
+#created-playlist {
+    min-height: 120px;
+    overflow-y: auto;
 }
 
 #user-playlist .container:hover #create {
@@ -151,9 +152,7 @@ a {
 }
 /* regole bottom user */
 #bottom-user {
-    position: absolute;
-    bottom: 0.5rem;
-    left: 1rem;
+    
 }
 
 #bottom-user > div {
@@ -505,14 +504,20 @@ main .col {
     }
 
     /* regole bottom user */
-    #bottom-user a {
-        width: 100%;
+    #bottom-user > div {
+        justify-content: center;
     }
+
+    #download-svg {
+        width: 1rem;  
+        height: 1rem;
+    }
+
     #profile-name, .remove-txt {
         display: none;
     }
 
-    #download-svg, #profile-img {
+    #profile-img {
         width: 100%;
     }
     /* regole main */
