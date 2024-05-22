@@ -90,6 +90,9 @@ a {
     gap: 0.5rem;
 }
 
+#container-col1 {
+    overflow: hidden;
+}
 /* regole user search */
 #user-search {
     margin-bottom: 1.5rem;
@@ -166,9 +169,6 @@ a {
     font-size: 1.5rem;
 }
 /* regole bottom user */
-#bottom-user {
-    
-}
 
 #bottom-user > div {
     width: 100%;
