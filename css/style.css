@@ -90,6 +90,9 @@ a {
 }
 
 /* regole user search */
+#user-search {
+    margin-bottom: 1.5rem;
+}
 .image-nav {
     width: 2rem;
     filter: invert(52%) sepia(6%) saturate(251%) hue-rotate(185deg) brightness(94%) contrast(87%);
@@ -104,6 +107,48 @@ a {
     color: #fff;
 }
 
+/* regole user-playlist */
+#user-playlist {
+    min-height: 190px;
+    height: 530px;
+    overflow-y: auto;
+}
+
+#user-playlist > * {
+    margin-bottom: 1rem;
+}
+
+#user-playlist .container {
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#user-playlist .container:hover #create {
+    background-color: #fff;
+}
+
+#playlist-create > * {
+    margin-bottom: 1rem;
+}
+
+#playlist-create li {
+    margin-bottom: 1rem;
+}
+
+#create {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #6d6f74;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+#create .fa-plus {
+    color: #000000;
+    font-size: 1.5rem;
+}
 /* regole bottom user */
 #bottom-user {
     position: absolute;
@@ -111,6 +156,9 @@ a {
     left: 1rem;
 }
 
+#bottom-user > div {
+    width: 100%;
+}
 #download-svg {
     width: 0.8rem;
 }
@@ -451,6 +499,22 @@ main .col {
         display: none;
     }
 
+    /* regole user playlist */
+    #user-playlist {
+        display: none;
+    }
+
+    /* regole bottom user */
+    #bottom-user a {
+        width: 100%;
+    }
+    #profile-name, .remove-txt {
+        display: none;
+    }
+
+    #download-svg, #profile-img {
+        width: 100%;
+    }
     /* regole main */
     main {
         width: calc(100vw - 50px);
